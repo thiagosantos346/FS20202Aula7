@@ -66,13 +66,13 @@ public class AlunoCtrl {
   }
 
   @GetMapping(value="/find/{str}")
-	public ResponseEntity<List<Aluno>> findByName(@PathVariable Optional<String> str){
+	public ResponseEntity<List<Aluno>> findByName(@PathVariable("str") String str){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;
 		
 		List<Aluno> list = new ArrayList<Aluno>();
     try {
-      list = business.findByNnAluno(str.get());
+      list = business.findByNnAluno(str);
       if(list.size() == 0) {
         status = HttpStatus.NO_CONTENT;
         headers.add("message", Message.get("0111"));
@@ -88,7 +88,7 @@ public class AlunoCtrl {
 	}
 
 
-  @GetMapping(value="/find/{bln}")
+  @GetMapping(value="/findByStatus/{bln}")
 	public ResponseEntity<List<Aluno>> findByStatus(@PathVariable Optional<Boolean> bln){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;
