@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_disciplina")
-public class Disciplina implements Serializable{
+public class Disciplina implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class Disciplina implements Serializable{
 	@Column(name="id_disciplina")
 	private Integer idDisciplina;
 	
-	@Column(name="nome_disciplina")
+	@Column(name="nm_disciplina")
 	private String nmDisciplina;
 	
 	@Column(name="carga_horaria")

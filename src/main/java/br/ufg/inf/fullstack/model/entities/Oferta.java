@@ -16,7 +16,7 @@ import br.ufg.inf.fullstack.model.enums.Dia;
 
 @Entity
 @Table(name="tb_oferta")
-public class Oferta implements Serializable{
+public class Oferta implements Serializable {
 	/**
 	 * 
 	 */

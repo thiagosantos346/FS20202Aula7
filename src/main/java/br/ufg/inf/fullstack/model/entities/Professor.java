@@ -17,7 +17,7 @@ import br.ufg.inf.fullstack.model.enums.Escolaridade;
 
 @Entity
 @Table(name="tb_professor")
-public class Professor implements Serializable{
+public class Professor implements Serializable {
 	
 	/**
 	 * 

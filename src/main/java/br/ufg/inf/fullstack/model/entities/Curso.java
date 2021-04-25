@@ -1,8 +1,28 @@
 package br.ufg.inf.fullstack.model.entities;
 
-public class Curso {
+import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_curso")
+public class Curso implements Serializable {
+	/*
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_curso")
 	private Integer idCurso;
+
+	@Column(name="nm_curso")
 	private String nmCurso;
 
 	public Curso() {
